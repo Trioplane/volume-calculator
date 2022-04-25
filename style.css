@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(33, 33, 37);
+}
+
+div {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  width: 50em;
+  background-color: rgb(54, 54, 54);
+  color: rgb(255, 153, 0);
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  font-family: Montserrat, Helvetica;
+  box-shadow: 0 0 10px 1px rgb(99, 99, 99);
+  border-radius: 0.5em;
+}
+
+input {
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.1em;
+  margin: 0.5%;
+  background-color: rgb(33, 33, 37);
+  color: white;
+  width: 20em;
+}
+
+input::placeholder {
+  font-family: Montserrat, Helvetica;
+  font-style: medium;
+  font-weight: 200;
+}
+
+h1 {
+  margin: 1em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+#answer {
+  font-size: 0.5em;
+}
+
+button {
+  border-radius: 0.1em;
+  border: 3px solid rgb(0, 162, 255);
+  padding: 1em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: rgb(0, 162, 255);
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: medium;
+  margin: 0.5em;
+  transition: all ease 0.1s;
+}
+
+button:hover {
+  margin: calc(0.5em + 3px);
+  background-color: rgb(0, 162, 255);
+  border: none;
+  color: white;
+}
