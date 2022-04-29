@@ -9,26 +9,120 @@
     <title>Volume Calculator</title>
   </head>
   <body>
-    <div>
-      <h1>Volume Calculator</h1>
-      <h2>Base:</h2>
-      <p>Add height and width here</p>
-      <input type="text" placeholder="Needs to be a number" id="base-length" />
-      <input type="text" placeholder="Needs to be a number" id="base-width" />
-      <h2>Length:</h2>
-      <p>Add length here</p>
-      <input type="text" placeholder="Needs to be a number" id="height" />
-      <p>Add type of measurement here</p>
-      <input
-        type="text"
-        id="measure"
-        placeholder="Example: cm,m,in (Optional)"
-      />
-      <button id="submit">submit</button>
-      <h1>
-        Answer:
-        <p id="answer">?</p>
-      </h1>
-    </div>
+    <!-- IDS: base-length, base-width, height, measure, submit, answer -->
+    <nav>
+      <div class="container">
+        <h2 id="vc">Volume Calculator</h2>
+        <div id="dropdown-container">
+          <button id="dropdown">Other Solid Figures</button>
+          <img src="svgs/arrow.svg" alt="down_arrow" id="arrow" />
+          <div id="dropdown-body" class="hide">
+            <ul>
+              <a href="#sphere">
+                <div class="dropdown-section">
+                  <img
+                    src="svgs/icon_sphere.svg"
+                    alt="Sphere"
+                    class="dropdown-svgs"
+                  />
+                  <li>Sphere</li>
+                </div>
+              </a>
+              <hr />
+              <a href="#cone">
+                <div class="dropdown-section">
+                  <img
+                    src="svgs/icon_cone.svg"
+                    alt="Cone"
+                    class="dropdown-svgs"
+                  />
+                  <li>Cone</li>
+                </div>
+              </a>
+              <hr />
+              <a href="#pyramid">
+                <div class="dropdown-section">
+                  <img
+                    src="svgs/icon_pyramid.svg"
+                    alt="Pyramid"
+                    class="dropdown-svgs"
+                  />
+                  <li>Pyramid</li>
+                </div>
+              </a>
+              <hr />
+              <a href="#basic">
+                <div class="dropdown-section">
+                  <img
+                    src="svgs/icon_rectangle.svg"
+                    alt="Rectangle"
+                    class="dropdown-svgs"
+                  />
+                  <li>Basic</li>
+                </div>
+              </a>
+              <hr />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="calculator-container">
+        <h1 class="title">Basic</h1>
+        <div class="input-container">
+          <div class="input">
+            <p class="input-title">Height</p>
+            <input
+              type="text"
+              class="input-text"
+              placeholder="Add height value here"
+              id="base-length"
+              onblur="isGood('base-length', 'input-info-bl')"
+            />
+            <p class="input-info" id="input-info-bl">...</p>
+          </div>
+          <div class="input">
+            <p class="input-title">Width</p>
+            <input
+              type="text"
+              class="input-text"
+              placeholder="Add width value here"
+              id="base-width"
+              onblur="isGood('base-width', 'input-info-bw')"
+            />
+            <p class="input-info" id="input-info-bw">...</p>
+          </div>
+          <div class="input">
+            <p class="input-title">Length</p>
+            <input
+              type="text"
+              class="input-text"
+              placeholder="Add length value here"
+              id="height"
+              onblur="isGood('height', 'input-info-h')"
+            />
+            <p class="input-info" id="input-info-h">...</p>
+          </div>
+
+          <div class="input">
+            <p class="input-title">Measurement</p>
+            <input
+              type="text"
+              class="input-text"
+              placeholder="Add measurement type here"
+              id="measure"
+            />
+          </div>
+          <button id="submit">Submit</button>
+        </div>
+        <div class="fieldset-container">
+          <fieldset class="answer-container">
+            <legend>Answer</legend>
+            <p id="answer"></p>
+          </fieldset>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
