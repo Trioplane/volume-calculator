@@ -11,7 +11,7 @@ body {
   background-image: url(pngs/background.png);
 }
 
-:root {
+.light-mode {
   --info: #482bd9;
   --danger: #810000;
   --success: #00a806;
@@ -20,6 +20,31 @@ body {
   --black-60: #b1b1b1;
   --black-40: #c2c2c2;
   --black-20: #f5f5f5;
+}
+
+.dark-mode {
+  --info: #482bd9;
+  --danger: #810000;
+  --success: #00a806;
+  --black-100: #f5f5f5;
+  --black-80: #c2c2c2;
+  --black-60: #b1b1b1;
+  --black-40: #757575;
+  --black-20: #1a1a1a;
+}
+
+#dark-mode {
+  display: none;
+}
+
+.dark-mode-button {
+  border: none;
+  background-color: transparent;
+  color: var(--black-20);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
 }
 
 /* NAVIGATION BAR */
@@ -94,7 +119,6 @@ hr {
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
-  line-height: 20px;
   display: flex;
 }
 

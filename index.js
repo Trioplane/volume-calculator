@@ -157,3 +157,20 @@ document.getElementById('d-pyramid').addEventListener('click', () => {
     document.getElementById('s-sphere').classList.add('hide')
     document.getElementById('s-cone').classList.add('hide')
 })
+
+
+// ----------------------------------------------------------------------------
+
+const darkModeButton = document.getElementById('dark-mode')
+const body = document.getElementById('body')
+const labelForDm = document.getElementById('dmlabel')
+
+if (darkModeButton.checked === true) {
+    body.classList.remove('light-mode')
+    body.classList.add('dark-mode')
+    labelForDm.innerText = "Light Mode"
+} else {
+    body.classList.remove('dark-mode')
+    body.classList.add('light-mode')
+    labelForDm.innerText = "Dark Mode"
+}

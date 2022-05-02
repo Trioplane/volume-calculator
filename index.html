@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="style.css" />
     <title>Volume Calculator</title>
   </head>
-  <body>
+  <body id="body" class="light-mode">
     <!-- IDS: base-length, base-width, height, measure, submit, answer -->
     <nav>
       <div class="container">
         <h2 id="vc">Volume Calculator</h2>
+        <input type="checkbox" id="dark-mode"></input type="checkbox">
+        <label for="dark-mode" class="dark-mode-button" id="dmlabel">Dark Mode</label>
         <div id="dropdown-container">
           <button id="dropdown">
             <p class="dropdown-text">Other Solid Figures</p>
