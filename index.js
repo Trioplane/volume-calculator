@@ -159,7 +159,7 @@ document.getElementById('d-pyramid').addEventListener('click', () => {
 })
 
 
-// ----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 const darkModeButton = document.getElementById('dark-mode')
 const body = document.getElementById('body')
